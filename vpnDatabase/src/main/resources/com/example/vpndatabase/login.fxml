@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vpndatabase.HelloController">
+    <children>
+        <BorderPane prefHeight="479.0" prefWidth="791.0">
+            <left>
+                <Pane prefHeight="479.0" prefWidth="399.0" styleClass="linear-grad" stylesheets="@styling.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="91.0">
+                            <children>
+                                <Circle fx:id="btnCls" fill="#ff671f" radius="9.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                                <Circle fill="#1f93ff00" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="2.0" />
+                                <Circle fill="#f8ff1f" radius="9.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                                <Circle fill="#1f93ff00" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="2.0" />
+                                <Circle fill="#23ff1f" radius="9.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                            </children></HBox>
+                        <Label layoutX="90.0" layoutY="287.0" text="Faiyaz &amp; Sajid^2 Presents" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                        <Label layoutX="146.0" layoutY="329.0" text="VPN">
+                            <font>
+                                <Font name="Bodoni MT Bold" size="48.0" />
+                            </font>
+                        </Label>
+                  <ImageView fitHeight="162.0" fitWidth="148.0" layoutX="123.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Fs_logo.png" />
+                     </image>
+                  </ImageView>
+                    </children></Pane>
+            </left>
+            <center>
+                <StackPane fx:id="pnlStack" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <Pane fx:id="connectionPage" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="388.0" fitWidth="387.0" layoutX="2.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@connected.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="timer" alignment="CENTER" layoutX="66.0" layoutY="310.0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="disconnect" layoutX="147.0" layoutY="388.0" mnemonicParsing="false" onAction="#setDisconnect" styleClass="button4" stylesheets="@styling.css" text="Disconnect" />
+                     </children>
+                  </Pane>
+                        <Pane fx:id="pnlSignUp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                            <children>
+                                <TextField fx:id="tfEmail1" layoutX="74.0" layoutY="122.0" prefHeight="35.0" prefWidth="245.0" promptText="email" />
+                                <TextField fx:id="tfEmail2" layoutX="76.0" layoutY="174.0" prefHeight="35.0" prefWidth="245.0" promptText="User Name" />
+                                <PasswordField fx:id="signupPass1" layoutX="72.0" layoutY="240.0" prefHeight="26.0" prefWidth="248.0" promptText="password" />
+                                <PasswordField fx:id="signupPass2" layoutX="72.0" layoutY="290.0" prefHeight="26.0" prefWidth="248.0" promptText="confirm password" />
+                                <Button fx:id="btnSignUp1" layoutX="88.0" layoutY="396.0" mnemonicParsing="false" onAction="#sigh" prefHeight="33.0" prefWidth="221.0" styleClass="button2" stylesheets="@styling.css" text="Already have an account?" />
+                                <Label fx:id="lblForgot11" layoutX="72.0" layoutY="49.0" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #ffff;" text="Register">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnSignIn1" layoutX="232.0" layoutY="330.0" mnemonicParsing="false" onAction="#signuponAction" prefHeight="33.0" prefWidth="88.0" styleClass="button1" stylesheets="@styling.css" text="Sign Up" />
+                        <Label fx:id="labelText2" alignment="CENTER" layoutX="75.0" layoutY="92.0" prefHeight="17.0" prefWidth="243.0" textAlignment="JUSTIFY" textFill="RED" />
+                            </children>
+                        </Pane>
+                  <Pane fx:id="connectpage" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="371.0" fitWidth="387.0" layoutX="3.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@white.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="connectinggg" alignment="CENTER" layoutX="124.0" layoutY="331.0" prefHeight="17.0" prefWidth="145.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="connectVTN" layoutX="120.0" layoutY="183.0" mnemonicParsing="false" onAction="#connectOnAction" prefHeight="113.0" prefWidth="153.0" styleClass="button3" stylesheets="@styling.css" text="Connect" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="connetingplane" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="373.0" fitWidth="379.0" layoutX="7.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@white.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="134.0" layoutY="216.0" text="Connecting..." textFill="#0082ff">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="start" layoutX="159.0" layoutY="272.0" mnemonicParsing="false" onAction="#startConnection" prefHeight="25.0" prefWidth="75.0" styleClass="button2" stylesheets="@styling.css" text="Start" />
+                     </children>
+                  </Pane>
+                        <Pane fx:id="pnlSignIn" onDragDetected="#sigh" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                            <children>
+                                <Label fx:id="lblForgot" layoutX="74.0" layoutY="299.0" text="Forgot Password?" />
+                                <TextField fx:id="tfEmail" layoutX="74.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="User Name" />
+                                <PasswordField fx:id="tfPassword" layoutX="74.0" layoutY="195.0" prefHeight="35.0" prefWidth="245.0" promptText="password" />
+                                <Button fx:id="btnSignIn" layoutX="219.0" layoutY="291.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="33.0" prefWidth="88.0" styleClass="button1" stylesheets="@styling.css" text="Sign in" />
+                                <Button fx:id="btnSignUp" layoutX="86.0" layoutY="376.0" mnemonicParsing="false" onAction="#sigh" prefHeight="33.0" prefWidth="221.0" styleClass="button2" stylesheets="@styling.css" text="Don't Have an Account? Register" />
+                                <Label fx:id="lblForgot1" layoutX="73.0" layoutY="57.0" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #ffff;" text="Sign In">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="labelText" alignment="CENTER" layoutX="73.0" layoutY="100.0" prefHeight="17.0" prefWidth="247.0" textFill="RED" />
+                        <RadioButton fx:id="logBtn" blendMode="DARKEN" layoutX="74.0" layoutY="247.0" mnemonicParsing="false" text="Keep log" textFill="#00ff88">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="nologBtn" blendMode="DARKEN" layoutX="197.0" layoutY="247.0" mnemonicParsing="false" text="Don't keep log" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
